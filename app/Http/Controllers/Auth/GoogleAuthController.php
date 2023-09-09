@@ -43,6 +43,7 @@ class GoogleAuthController extends Controller
 
             $res = [
                 'user' => $user->email,
+                'token' => $user->token,
                 'msg' => 'Logged in successfully'
             ];
 
