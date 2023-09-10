@@ -1,0 +1,1037 @@
+{
+	"info": {
+		"_postman_id": "58be4b56-ce53-4d79-acda-fde1df380eea",
+		"name": "Todo list APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28373568"
+	},
+	"item": [
+		{
+			"name": "Store todo list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Update meeting minutes",
+							"type": "default"
+						},
+						{
+							"key": "description",
+							"value": "Update meeting minutes and email to manager.",
+							"type": "default"
+						},
+						{
+							"key": "status",
+							"value": "1",
+							"type": "default",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/todo-list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"todo-list"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Successfully store todo list",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Update meeting minutes",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Update meeting minutes and email to manager.",
+									"type": "default"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/todo-list",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"todo-list"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Sep 2023 13:16:14 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Sep 2023 13:16:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.10"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=Ni0VRSgt0sSClGaSX2kAhsYjSOdG9xgViHx4coxO; expires=Sun, 10-Sep-2023 14:16:14 GMT; Max-Age=3600; path=/; domain=http://127.0.0.1:8000; httponly; samesite=lax"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Successfully created Todo 3\",\n    \"todo\": {\n        \"name\": \"Update meeting minutes\",\n        \"description\": \"Update meeting minutes and email to manager.\",\n        \"status\": 0,\n        \"updated_at\": \"2023-09-10T13:16:14.000000Z\",\n        \"created_at\": \"2023-09-10T13:16:14.000000Z\",\n        \"id\": 3\n    }\n}"
+				},
+				{
+					"name": "Auth failed (no token)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Update meeting minutes",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Update meeting minutes and email to manager.",
+									"type": "default"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/todo-list",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"todo-list"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Sep 2023 13:26:26 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Sep 2023 13:26:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.10"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=274XofRcf5jadVKgkLNIDgYwiVgtvYxsYqd4h9Mw; expires=Sun, 10-Sep-2023 14:26:26 GMT; Max-Age=3600; path=/; domain=http://127.0.0.1:8000; httponly; samesite=lax"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"User authentication failed. Please login or provide a new token to proceed.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get todo list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Update meeting minutes",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "Update meeting minutes and email to manager.",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": "1",
+							"type": "default",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/todo-list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"todo-list"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Successfully retrieved todo list",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Update meeting minutes",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Update meeting minutes and email to manager.",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/todo-list",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"todo-list"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Sep 2023 13:17:15 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Sep 2023 13:17:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.10"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=FKxVWHTlf8c4BMva1FSILXkpiU0QinqfQ6mCLiPq; expires=Sun, 10-Sep-2023 14:17:15 GMT; Max-Age=3600; path=/; domain=http://127.0.0.1:8000; httponly; samesite=lax"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 2,\n        \"name\": \"Update meeting minutes\",\n        \"description\": \"Update meeting minutes and email to manager.\",\n        \"status\": \"0\",\n        \"created_at\": \"2023-09-10T13:13:43.000000Z\",\n        \"updated_at\": \"2023-09-10T13:13:43.000000Z\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Update meeting minutes\",\n        \"description\": \"Update meeting minutes and email to manager.\",\n        \"status\": \"0\",\n        \"created_at\": \"2023-09-10T13:16:14.000000Z\",\n        \"updated_at\": \"2023-09-10T13:16:14.000000Z\"\n    }\n]"
+				},
+				{
+					"name": "Auth failed (no token)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Update meeting minutes",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Update meeting minutes and email to manager.",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/todo-list",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"todo-list"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Sep 2023 13:25:41 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Sep 2023 13:25:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.10"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=m4SJ9mKoFxxyLUvUCWQaN599t7uaztLsiRWsrEdP; expires=Sun, 10-Sep-2023 14:25:41 GMT; Max-Age=3600; path=/; domain=http://127.0.0.1:8000; httponly; samesite=lax"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"User authentication failed. Please login or provide a new token to proceed.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update todo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Update meeting minutes",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "Update meeting minutes and email to manager.",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": "1",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/todo-list/update/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"todo-list",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Successfully updated todo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Update meeting minutes",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Update meeting minutes and email to manager.",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/todo-list/update/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"todo-list",
+								"update",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Sep 2023 13:18:27 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Sep 2023 13:18:27 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.10"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=MFKWM3hEvd0kyVc7ZxVQMgkwyxwayI899iy3iFlw; expires=Sun, 10-Sep-2023 14:18:27 GMT; Max-Age=3600; path=/; domain=http://127.0.0.1:8000; httponly; samesite=lax"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Successfully updated todo 2\",\n    \"todo\": {\n        \"id\": 2,\n        \"name\": \"Update meeting minutes\",\n        \"description\": \"Update meeting minutes and email to manager.\",\n        \"status\": \"1\",\n        \"created_at\": \"2023-09-10T13:13:43.000000Z\",\n        \"updated_at\": \"2023-09-10T13:18:27.000000Z\"\n    }\n}"
+				},
+				{
+					"name": "Todo not found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Update meeting minutes",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Update meeting minutes and email to manager.",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/todo-list/update/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"todo-list",
+								"update",
+								"1"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Sep 2023 13:24:48 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Sep 2023 13:24:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.10"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=MVEabKGO9fKVmUl1G72uQZtYjP8x2ZBndcwv6Tdc; expires=Sun, 10-Sep-2023 14:24:48 GMT; Max-Age=3600; path=/; domain=http://127.0.0.1:8000; httponly; samesite=lax"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Todo not found.\"\n}"
+				},
+				{
+					"name": "Auth failed (no token)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Update meeting minutes",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Update meeting minutes and email to manager.",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/todo-list/update/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"todo-list",
+								"update",
+								"1"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Sep 2023 13:26:42 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Sep 2023 13:26:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.10"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=TcYsZudCVaWGOfOy7YqkvtIRwpMTJANnHkHOc36C; expires=Sun, 10-Sep-2023 14:26:42 GMT; Max-Age=3600; path=/; domain=http://127.0.0.1:8000; httponly; samesite=lax"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"User authentication failed. Please login or provide a new token to proceed.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete todo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/todo-list/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"todo-list",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Successfully delete todo",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/todo-list/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"todo-list",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Sep 2023 13:19:00 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Sep 2023 13:19:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.10"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=40OgboumCeUCB0ow7UF2u7i699LnkgeZvbTzUZ2l; expires=Sun, 10-Sep-2023 14:19:00 GMT; Max-Age=3600; path=/; domain=http://127.0.0.1:8000; httponly; samesite=lax"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Todo deleted successfully.\"\n}"
+				},
+				{
+					"name": "Auth failed (no token)",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/todo-list/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"todo-list",
+								"2"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Sep 2023 13:27:04 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Sep 2023 13:27:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.10"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=9aDRLFsWWGXJxNpwhhNN3SWDr8kNf0f94pahA2g6; expires=Sun, 10-Sep-2023 14:27:04 GMT; Max-Age=3600; path=/; domain=http://127.0.0.1:8000; httponly; samesite=lax"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"User authentication failed. Please login or provide a new token to proceed.\"\n}"
+				}
+			]
+		}
+	]
+}
