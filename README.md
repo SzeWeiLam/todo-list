@@ -25,7 +25,7 @@
 
 ## 3. Test APIs using CURL or POSTMAN (Login to get token)
 3.1 Run http://127.0.0.1:8000/api/login in any browser and login google account, user {token} will be returned.
-    E.g : ya29.a0AfB_byBUzDtKxPCtPNkdQSGGuo1l4kxYiRTkzsiiKvwkiLekvEAq5q7zEZz_Ghhie4AwJwOWaifMik2xd_HOVkNJZjne32ODD76-IactzD9oRMVsODvsE9B1xWe1OxfWy41XbTKoUkPBV0P4cxZGGnc376wA0IeNmCwaCgYKAccSARESFQGOcNnCz3BvmOYNtcRUk6RHRH7wHA0170
+    E.g : ```ya29.a0AfB_byBUzDtKxPCtPNkdQSGGuo1l4kxYiRTkzsiiKvwkiLekvEAq5q7zEZz_Ghhie4AwJwOWaifMik2xd_HOVkNJZjne32ODD76-IactzD9oRMVsODvsE9B1xWe1OxfWy41XbTKoUkPBV0P4cxZGGnc376wA0IeNmCwaCgYKAccSARESFQGOcNnCz3BvmOYNtcRUk6RHRH7wHA0170```
 
 3.2 Use the token to set it as Bearer Token in postman before testing any API OR run curl --location 'http://127.0.0.1:8000/api/{route}/{param}' \ --header 'Authorization: Bearer {token} in terminal.
 Note that the login token will be expired in 1 hour right after login.
