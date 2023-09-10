@@ -33,23 +33,33 @@
 
 **OR**
 
-4.2 Run ```curl --location --request POST 'http://127.0.0.1:8000/api/todo-list/' \
---header 'Authorization: Bearer ya29.a0AfB_byDXxIug6lvKuzCvw2AHp2jy-vx3_NBe75W4qDSImnpf5OIG7aeiM1DV9dDaAiB9f-QkyQmrmLg2K5PrBmajETCdonQV6k-6aIaTHAVIF5IxRT25Hpz8XbTqP6rcvg857KUjNzZlhV3qZnjBiDQaK6IPwC7NpwUaCgYKAaQSARESFQGOcNnCC-XGH7ZIdxO1u5FP_bvOBQ0170'``` in terminal.
+4.2 Run ```curl --location 'http://127.0.0.1:8000/api/todo-list' \
+--header 'Authorization: Bearer ya29.a0AfB_byBUzDtKxPCtPNkdQSGGuo1l4kxYiRTkzsiiKvwkiLekvEAq5q7zEZz_Ghhie4AwJwOWaifMik2xd_HOVkNJZjne32ODD76-IactzD9oRMVsODvsE9B1xWe1OxfWy41XbTKoUkPBV0P4cxZGGnc376wA0IeNmCwaCgYKAccSARESFQGOcNnCz3BvmOYNtcRUk6RHRH7wHA0170'``` in terminal.
 
-## 5. Test APIs using CURL or POSTMAN (Update todo list to complete)
-5.1 Use the token to set it as Bearer Token in postman before running POST request of *http://127.0.0.1:8000/api/todo-list/update/1* 
+## 5. Test APIs using CURL or POSTMAN (Store todo list)
+5.1 Use the token to set it as Bearer Token in postman before running POST request of *http://127.0.0.1:8000/api/todo-list/* with body of form data with params (name & description).
+
+**OR**
+
+5.2 Run ```curl --location 'http://127.0.0.1:8000/api/todo-list' \
+--header 'Authorization: Bearer ya29.a0AfB_byBUzDtKxPCtPNkdQSGGuo1l4kxYiRTkzsiiKvwkiLekvEAq5q7zEZz_Ghhie4AwJwOWaifMik2xd_HOVkNJZjne32ODD76-IactzD9oRMVsODvsE9B1xWe1OxfWy41XbTKoUkPBV0P4cxZGGnc376wA0IeNmCwaCgYKAccSARESFQGOcNnCz3BvmOYNtcRUk6RHRH7wHA0170' \
+--form 'name="Update meeting minutes"' \
+--form 'description="Update meeting minutes and email to manager."'``` in terminal.
+
+## 6. Test APIs using CURL or POSTMAN (Update todo list to complete)
+6.1 Use the token to set it as Bearer Token in postman before running POST request of *http://127.0.0.1:8000/api/todo-list/update/1* 
 
 **OR** 
 
-5.2 Run ```curl --location 'http://127.0.0.1:8000/api/todo-list/update/1' \
+6.2 Run ```curl --location 'http://127.0.0.1:8000/api/todo-list/update/1' \
 --header 'Authorization: Bearer ya29.a0AfB_byDXxIug6lvKuzCvw2AHp2jy-vx3_NBe75W4qDSImnpf5OIG7aeiM1DV9dDaAiB9f-QkyQmrmLg2K5PrBmajETCdonQV6k-6aIaTHAVIF5IxRT25Hpz8XbTqP6rcvg857KUjNzZlhV3qZnjBiDQaK6IPwC7NpwUaCgYKAaQSARESFQGOcNnCC-XGH7ZIdxO1u5FP_bvOBQ0170' \
 --form 'status="1"'``` in terminal.
 
-## 5. Test APIs using CURL or POSTMAN (Delete todo list)
-5.1 Use the token to set it as Bearer Token in postman before running DELETE request of *http://127.0.0.1:8000/api/todo-list/1* 
+## 7. Test APIs using CURL or POSTMAN (Delete todo list)
+7.1 Use the token to set it as Bearer Token in postman before running DELETE request of *http://127.0.0.1:8000/api/todo-list/1* 
 
 **OR** 
 
-5.2 Run ```curl --location --request DELETE 'http://127.0.0.1:8000/api/todo-list/1' \
+7.2 Run ```curl --location --request DELETE 'http://127.0.0.1:8000/api/todo-list/1' \
 --header 'Authorization: Bearer ya29.a0AfB_byDXxIug6lvKuzCvw2AHp2jy-vx3_NBe75W4qDSImnpf5OIG7aeiM1DV9dDaAiB9f-QkyQmrmLg2K5PrBmajETCdonQV6k-6aIaTHAVIF5IxRT25Hpz8XbTqP6rcvg857KUjNzZlhV3qZnjBiDQaK6IPwC7NpwUaCgYKAaQSARESFQGOcNnCC-XGH7ZIdxO1u5FP_bvOBQ0170'``` in terminal.
     
